@@ -1,47 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Web Makanan Biar Akbar Jadi Lebih Kurus</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Dietry</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Picture/DALL·E 2024-09-19 12.41.59 - A minimalist logo for a website called 'Dietry'. The logo features sleek, modern sans-serif lowercase typography spelling 'dietry'. A simple, stylized.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
+        <!-- open nav -->
         <nav class="navbar">
-            <a href="#" class="logo">Dietry<span>.</span></a>
-            <ul class="menul">
-                <span id="close-btn" class="material-symbols-outlined">close</span>
-                <li><a href="#">Rendah Lemak</a></li>
-                <li><a href="#">Rendah Kalori</a></li>
-                <li><a href="#">No Gluten</a></li>
-                <li><a href="#">High Vitamin</a></li>
-                <li><a href="#">High Protein</a></li>
-            </ul>
-            <span id="menu-btn" class="material-symbols-outlined">menu</span>
+            <img src="/Picture/logo-removebg-preview.png" alt="">
+            <span class="nama-logo">Dietry</span>
+            <a href="#" class="pilihan-menu">Beranda</span>
+            <a href="#" class="pilihan-menu">Kategori</span>
+            <a href="#" class="pilihan-menu">Tentang</a>
+            <a href="#" class="pilihan-menu">Search <i class="fa fa-search"></i></a> 
         </nav>
+        <!-- nav closing -->
     </header>
-
-    <section class="sec">
+ 
+    <section class="isi">
         <div class="konten">
             <h1>Mau Kurus Biar Tidak Seperti Akbar ?</h1>
             <p>Mulai telusuri website kita agar kalian bisa
                 mulai menemukan menu menu sehat yang tentunya
                 juga bernutrisi
             </p>
-            <button>Menu UwU</button>
         </div>
     </section>
-    <script>
-        const header = document.querySelector("header");
-        const mbtn = document.querySelector("#menu-btn");
-        const cmbtn = document.querySelector("#close-menu-btn");
-
-        mbtn.addEventListener("click", () => {
-            header.classList.toggle("mobmen");
-        });
-    </script>
-
 </body>
 </html>
