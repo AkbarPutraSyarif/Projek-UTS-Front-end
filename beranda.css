@@ -1,0 +1,108 @@
+
+*{
+    font-family: Renner, helvetica, sans-serif;
+}
+body{
+    background-image: url(/Picture/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+ 
+/* navigasi style opening */
+.navbar{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(242, 239, 233);
+    margin: 70px 250px 40px 250px;
+    padding: 15px;
+}
+ 
+.navbar img{
+    width: 80px;
+}
+ 
+.navbar .nama-logo{
+    font-size: 30px;
+    color: #f93030;
+    margin-right: 450px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+ 
+ 
+.navbar a{
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+/* Style untuk dropdown opening*/
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.dropdown-content a:hover {
+    background-color: #fbadad;
+    border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    visibility: visible;
+
+}
+/* Style untuk dropdown closing */
+
+
+/* navigasi style closing */
+ 
+/* isi opening */
+.isi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+ 
+.konten {
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+ 
+.konten h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+ 
+.konten p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+ 
+/* isi closing */
