@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <!-- link js -->
-    <script src="kategori.js"></script>    
+    <script src="kategori.js"></script>   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
 </head>
 <body>
     <header>
@@ -37,7 +39,9 @@
                 </div>
             </div>
             <a href="#">Tentang</a>
-            <a href="#">Search <i class="fa fa-search"></i></a>
+            <a href="#">Hubungi Kami</a>
+            <input type="text" id="search-box" placeholder="Search..." class="search-input">
+            <button id="search-btn" class="search-btn"><i class="fa fa-search"></i></button>
         </nav>
         
         <!-- nav closing -->
@@ -65,7 +69,7 @@
     </div>
     <!-- coming soon closing -->
 
-    <section class="resep">
+    <section class="resep" id="resep-list">
         <div class="resep-1">
             <h1 id="vegan">Vegan</h1>
             <div class="menu-list">
@@ -184,5 +188,20 @@
             </div>
         </div>
     </section>
+
+    <footer>
+        <ul class="sosmed">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="">Kebijakan Privasi</a></li>
+            <li><a href="">Ketentuan Layanan</a></li>
+            <li><a href="">Hubungi Kami</a></li>
+        </ul>
+        <p>&copy; 2024 Dietry. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>

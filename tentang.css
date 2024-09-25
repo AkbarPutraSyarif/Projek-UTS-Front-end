@@ -1,0 +1,267 @@
+    *{
+        font-family: Renner, helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    body{
+        background-image: url(/Picture/background.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* navigasi style opening */
+    .navbar{
+        border: 1px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(242, 239, 233);
+        margin: 70px 250px 40px 250px;
+        padding: 15px;
+        
+    }
+    
+    .navbar img{
+        width: 80px;
+    }
+    
+    .navbar .nama-logo {
+        font-size: 30px;
+        color: #f93030;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        flex-grow: 1;
+    }
+    
+    
+    .navbar a{
+        font-size: 20px;
+        color: black;
+        text-decoration: none;
+        margin-right: 30px;
+    }
+
+    /* Style untuk dropdown opening*/
+
+    .dropdown-content a {
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+        display: block;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        visibility: hidden;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #fbadad;
+        border-radius: 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        visibility: visible;
+
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(9,193px);
+        grid-template-rows: repeat(5,150px);
+    }
+
+    .isi{
+        
+        border: 1px solid rgb(2, 2, 2);
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 1px 30px 30px 30px;
+        margin: 40px 250px 100px 250px;
+        
+    }
+
+
+    .tagline{
+        background-color: rgba(255, 255, 255, 0.2);
+        grid-area: 1/1/2/5;
+        margin-top: 1.7rem;
+        font-size: 1.2rem;
+        margin-bottom: -3rem;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+    }
+    .tagline h1{
+        font-family: 'Poppins', sans-serif;
+        margin-left: 2rem;
+
+    }
+
+    .tagline p{
+        margin-left: 2rem;
+
+    }
+
+    .foto {
+        grid-area: 2 / 1 / 4 / 3;
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 50%;
+        overflow: hidden;
+        width: 60%;
+        height: auto;
+        margin-top: 5.5rem;
+        margin-left: 0.5rem;
+    }
+    
+    .foto img {
+        width: 100%; /* Memastikan gambar mengisi kontainer */
+        height: 100%; /* Mengatur tinggi gambar sesuai tinggi kontainer */
+        object-fit: cover; /* Memastikan gambar memenuhi area border tanpa distorsi */
+        border-radius: 50%; /* Sudut bulat untuk gambar */
+    }
+
+    .konten{
+        background-color: rgba(255, 255, 255, 0.2);
+        font-size: 1rem;
+        margin-top: 6rem;
+        margin-left: 4rem;
+        text-align: left;
+        grid-area: 2/2/4/6;
+        font-size: 1.2rem;
+        margin-right: -0.5rem;
+        margin-bottom: 1.5rem;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+    }
+
+    .konten h1{
+        font-family: 'Poppins', sans-serif;
+        margin-left: 1.9rem;
+    }
+
+    .konten p{
+        margin-left: 1.9rem;
+    }
+
+    .konten-1{
+        background-color: rgba(255, 255, 255, 0.2);
+        grid-area: 3/1/5/5;
+        font-size: 1.3rem;
+        margin-top: 11rem;
+        margin-bottom: -7.5rem;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+    }
+
+    .konten-1 h1{
+        font-family: 'Poppins', sans-serif;
+        margin-left: 2rem;
+    }
+
+    .konten-1 p{
+        margin-left: 2rem;
+    }
+
+    .tagline:hover, .konten:hover, .konten-1:hover {
+        border: 2px solid #edc271; /* Warna border berubah saat hover */
+        transform: scale(1.02); /* Sedikit memperbesar */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Efek bayangan */
+        background-color: rgb(242, 239, 233);
+    }
+
+    footer {
+        position: relative;
+        width: 100%;
+        background: rgb(242, 239, 233);
+        min-height: 100px;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .sosmed, footer .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        width: 100%;
+        padding: 0;
+    }
+
+    footer .sosmed li, footer .menu li {
+        list-style: none;
+        margin: 0 15px;
+    }
+
+    footer .sosmed li a {
+        font-size: 2em;
+        color: #050505;
+        display: inline-block;
+        transition: 0.5s;
+    }
+
+    footer .sosmed li a:hover {
+        transform: translateY(-10px);
+    }
+
+    footer .menu li a {
+        font-size: 1.2em;
+        color: #030303;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 0.3s;
+    }
+
+    footer .menu li a:hover {
+        opacity: 1;
+    }
+
+    footer p {
+        margin-top: 15px;
+        font-size: 1.1em;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar input {
+        width: 250px;
+        padding: 8px 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .navbar .search-btn {
+        padding: 10px 20px;
+        background: linear-gradient(45deg, #007BFF, #00D4FF);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background 0.3s, transform 0.2s;
+    }
+
+
+    .navbar .search-btn:hover {
+        background: linear-gradient(45deg, #0056b3, #00a3d9);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar .search-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
