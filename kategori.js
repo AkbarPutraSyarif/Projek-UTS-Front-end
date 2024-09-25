@@ -21,5 +21,5 @@ $(document).ready(function () {
       });
     $('.coming').on('click', function() {
         $('.dialog').dialog("open")
-    });        
+    });
 });
