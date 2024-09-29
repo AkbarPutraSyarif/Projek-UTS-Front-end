@@ -230,34 +230,185 @@
         text-align: center;
     }
 
-    .navbar input {
-        width: 250px;
-        padding: 8px 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        margin-right: 10px;
+
+    @media (max-width: 1208px) {
+        section {
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        .navbar {
+            margin: 50px 150px 30px 150px;
+            padding: 10px;
+        }
+    
+        .navbar img {
+            width: 70px; 
+        }
+    
+        .navbar a {
+            font-size: 18px; 
+        }
+    
+        .isi {
+            margin: 30px 150px 80px 150px; 
+            padding: 15px;
+        }
+    
+        .tagline, .konten, .konten-1 {
+            margin: 20px 0; 
+            padding: 15px; 
+            border-radius: 8px; 
+            width: 90%; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            background-color: rgba(255, 255, 255, 0.2); 
+        }
+    
+        .foto {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border: none; 
+            margin-bottom: 20px;
+        }
+    
+        .foto img {
+            width: 320px; 
+            height: 320px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 2px solid black; 
+        }
+    
+        footer {
+            padding: 20px 0;
+        }
     }
 
-    .navbar .search-btn {
-        padding: 10px 20px;
-        background: linear-gradient(45deg, #007BFF, #00D4FF);
-        color: white;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background 0.3s, transform 0.2s;
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            margin: 20px;
+            padding: 10px;
+        }
+    
+        .navbar img {
+            width: 60px;
+        }
+    
+        .navbar a {
+            font-size: 16px;
+            margin-right: 10px;
+        }
+    
+        .isi {
+            margin: 20px;
+            padding: 10px;
+        }
+    
+        section {
+            display: block;
+            padding: 10px;
+        }
+    
+        .foto {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border: none; 
+        }
+    
+        .foto img {
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 2px solid black; 
+        }
+    
+        .tagline {
+            font-size: 1rem;
+            margin: 32px ;
+            
+        }
+    
+        .konten {
+            font-size: 1rem;
+            margin: 32px ;
+            text-align: justify;
+        }
+    
+        .konten-1 {
+            font-size: 1rem;
+            margin: 32px ;
+            text-align: justify;
+            padding-bottom: 20px; 
+        }
     }
-
-
-    .navbar .search-btn:hover {
-        background: linear-gradient(45deg, #0056b3, #00a3d9);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    .navbar .search-btn:active {
-        transform: translateY(0);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    
+    @media (max-width: 576px) {
+        .navbar {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+        }
+    
+        .navbar img {
+            width: 50px;
+        }
+    
+        .navbar a {
+            font-size: 14px;
+            margin-right: 5px;
+        }
+    
+        .navbar input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    
+        .navbar .search-btn {
+            width: 100%;
+        }
+    
+        .isi {
+            margin: 10px;
+            padding: 10px;
+        }
+    
+        section {
+            display: block;
+            padding: 5px;
+        }
+    
+        .foto {
+            width: 100%;
+        }
+    
+        .foto img {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+        }
+    
+        .konten, .konten-1 {
+            font-size: 0.9rem;
+        }
+    
+        footer {
+            padding: 10px 0;
+        }
+    
+        footer .sosmed li a {
+            font-size: 1.5em;
+        }
+    
+        footer .menu li a {
+            font-size: 1em;
+        }
     }
