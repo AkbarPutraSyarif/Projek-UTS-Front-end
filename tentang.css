@@ -79,13 +79,11 @@
     }
 
     .isi{
-        
         border: 1px solid rgb(2, 2, 2);
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.2);
         padding: 1px 30px 30px 30px;
         margin: 40px 250px 100px 250px;
-        
     }
 
 
@@ -101,12 +99,10 @@
     .tagline h1{
         font-family: 'Poppins', sans-serif;
         margin-left: 2rem;
-
     }
 
     .tagline p{
         margin-left: 2rem;
-
     }
 
     .foto {
@@ -122,10 +118,10 @@
     }
     
     .foto img {
-        width: 100%; /* Memastikan gambar mengisi kontainer */
-        height: 100%; /* Mengatur tinggi gambar sesuai tinggi kontainer */
-        object-fit: cover; /* Memastikan gambar memenuhi area border tanpa distorsi */
-        border-radius: 50%; /* Sudut bulat untuk gambar */
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+        border-radius: 50%; 
     }
 
     .konten{
@@ -171,9 +167,9 @@
     }
 
     .tagline:hover, .konten:hover, .konten-1:hover {
-        border: 2px solid #edc271; /* Warna border berubah saat hover */
-        transform: scale(1.02); /* Sedikit memperbesar */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Efek bayangan */
+        border: 2px solid #edc271; 
+        transform: scale(1.02); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
         background-color: rgb(242, 239, 233);
     }
 
