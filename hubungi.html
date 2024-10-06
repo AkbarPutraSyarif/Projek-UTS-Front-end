@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dietry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="hubungi.css">
+    <!-- Link icon title -->
+    <link rel="icon" type="image/x-icon" href="/Picture/logo.jpg">
+    <!-- Link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <!-- Link jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Link jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Link Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <!-- Open nav -->
+        <nav class="navbar">
+            <img src="/Picture/logo-remove.png" alt="">
+            <span class="nama-logo">Dietry</span>
+            <a href="beranda.html">Beranda</a>
+            <div class="dropdown">
+                <a href="kategori.html">Kategori</a>
+                <div class="dropdown-content">
+                    <a href="kategori.html#vegan">Vegan</a>
+                    <a href="kategori.html#kalori">Rendah Kalori</a>
+                    <a href="kategori.html#lemak">Rendah Lemak</a>
+                    <a href="kategori.html#vitamin">Tinggi Vitamin</a>
+                    <a href="kategori.html#gluten">Bebas Gluten</a>
+                    <a href="kategori.html#protein">Tinggi Protein</a>
+                </div>
+            </div>
+            <a href="tentang.html">Tentang</a>
+            <a href="hubungi.html">Hubungi Kami</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="isi">
+            <div class="kiri">
+                <div class="alamat info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="judul">Alamat</div>
+                    <div class="t1">Tarumanagara University</div>
+                    <div class="t2">Jakarta Barat, Grogol</div>
+                </div>
+                <div class="nomor info">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="judul">Nomor Telepon</div>
+                    <div class="t1">+62 876 5547 5432</div>
+                    <div class="t2">+62 888 6574 3214</div>
+                </div>
+                <div class="email info">
+                    <i class="fas fa-envelope"></i>
+                    <div class="judul">Email</div>
+                    <div class="t1">Dietrysupport@gmail.com</div>
+                    <div class="t2">info.dietry@gmail.com</div>
+                </div>
+            </div>
+            <div class="kanan">
+                <div class="judul-1">Hubungi Kami</div>
+                <p>Untuk pengguna yang memiliki kritik atau saran, maupun keluhan, mohon hubungi kami disini.</p>
+                <form id="contact-form">
+                    <div class="input-info">
+                        <input type="text" id="name" placeholder="Masukan Nama">
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="input-info">
+                        <input type="text" id="email" placeholder="Masukan Email">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="input-pesan">
+                        <textarea id="message" placeholder="Masukan Pesan"></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    <div class="button">
+                        <button type="submit">Kirim</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul class="sosmed">
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="">Kebijakan Privasi</a></li>
+            <li><a href="">Ketentuan Layanan</a></li>
+            <li><a href="hubungi.html">Hubungi Kami</a></li>
+        </ul>
+        <p>&copy; 2024 Dietry. All rights reserved.</p>
+    </footer>
+
+    <script src="hubungi.js"></script> 
+</body>
+</html>
