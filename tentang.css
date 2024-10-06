@@ -1,414 +1,368 @@
-    *{
-        font-family: Renner, helvetica, sans-serif;
-        box-sizing: border-box;
-    }
-    body{
-        background-image: url(/Picture/background.jpg);
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 0;
-        margin: 0;
-    }
-    
-    /* navigasi style opening */
-    .navbar{
-        border: 1px solid rgb(255, 255, 255);
-        border-radius: 10px;
+* {
+    font-family: Renner, helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(/Picture/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(242, 239, 233);
+    margin: 70px 250px 40px 250px;
+    padding: 15px;
+}
+
+.navbar img {
+    width: 80px;
+}
+
+.navbar .nama-logo {
+    font-size: 30px;
+    color: #f93030;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    flex-grow: 1;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.navbar a:hover {
+    color: #f93030;
+    transition: color 0.3s;
+}
+
+/* Dropdown styling */
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.dropdown-content a:hover {
+    background-color: #fbadad;
+    border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    visibility: visible;
+}
+
+/* Section styling */
+section {
+    display: grid;
+    grid-template-columns: repeat(9, 193px);
+    grid-template-rows: repeat(5, 150px);
+}
+
+/* Content block styling */
+.isi {
+    border: 1px solid rgb(2, 2, 2);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1px 30px 30px 30px;
+    margin: 40px 250px 100px 250px;
+}
+
+.tagline, .konten, .konten-1 {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 1.7rem;
+    padding: 15px;
+}
+
+.tagline {
+    grid-area: 1/1/2/5;
+    margin-bottom: -3rem;
+}
+
+.tagline h1 {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 2rem;
+}
+
+.tagline p {
+    margin-left: 2rem;
+}
+
+.foto {
+    grid-area: 2 / 1 / 4 / 3;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 60%;
+    margin-top: 5.5rem;
+    margin-left: 0.5rem;
+}
+
+.foto img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 50%;
+}
+
+.konten {
+    font-size: 1.2rem;
+    margin-top: 6rem;
+    margin-left: 4rem;
+    text-align: left;
+    grid-area: 2/2/4/6;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.konten h1, .konten-1 h1 {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 2rem;
+}
+
+.konten p, .konten-1 p {
+    margin-left: 2rem;
+}
+
+.konten-1 {
+    font-size: 1.3rem;
+    grid-area: 3/1/5/5;
+    margin-top: 11rem;
+    margin-bottom: -7.5rem;
+}
+
+/* Hover effect */
+.tagline:hover, .konten:hover, .konten-1:hover {
+    border: 2px solid #edc271;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    background-color: rgb(242, 239, 233);
+}
+
+/* Footer styling */
+footer {
+    position: relative;
+    width: 100%;
+    background: rgb(242, 239, 233);
+    min-height: 100px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .sosmed, footer .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+footer .sosmed li, footer .menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+footer .sosmed li a {
+    font-size: 2em;
+    color: #050505;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .sosmed li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #030303;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive styling for screens less than 1208px */
+@media (max-width: 1208px) {
+    section {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        background-color: rgb(242, 239, 233);
-        margin: 70px 250px 40px 250px;
+    }
+    .navbar {
+        margin: 50px 150px 30px 150px;
+        padding: 10px;
+    }
+
+    .navbar img {
+        width: 70px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+
+    .isi {
+        margin: 30px 150px 80px 150px;
         padding: 15px;
-        
-    }
-    
-    .navbar img{
-        width: 80px;
-    }
-    
-    .navbar .nama-logo {
-        font-size: 30px;
-        color: #f93030;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        flex-grow: 1;
-    }
-    
-    
-    .navbar a{
-        font-size: 20px;
-        color: black;
-        text-decoration: none;
-        margin-right: 30px;
     }
 
-    /* Style untuk dropdown opening*/
-
-    .dropdown-content a {
-        color: black;
-        padding: 8px 16px;
-        text-decoration: none;
-        display: block;
-        margin: 0;
-    }
-
-    .dropdown-content {
-        visibility: hidden;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-        border-radius: 20px;
-    }
-
-    .dropdown-content a:hover {
-        background-color: #fbadad;
-        border-radius: 20px;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-        visibility: visible;
-
-    }
-
-    section{
-        display: grid;
-        grid-template-columns: repeat(9,193px);
-        grid-template-rows: repeat(5,150px);
-    }
-
-    .isi{
-        border: 1px solid rgb(2, 2, 2);
-        border-radius: 10px;
+    .tagline, .konten, .konten-1 {
+        margin: 20px 0;
+        padding: 15px;
+        width: 90%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         background-color: rgba(255, 255, 255, 0.2);
-        padding: 1px 30px 30px 30px;
-        margin: 40px 250px 100px 250px;
-    }
-
-
-    .tagline{
-        background-color: rgba(255, 255, 255, 0.2);
-        grid-area: 1/1/2/5;
-        margin-top: 1.7rem;
-        font-size: 1.2rem;
-        margin-bottom: -3rem;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-    }
-    .tagline h1{
-        font-family: 'Poppins', sans-serif;
-        margin-left: 2rem;
-    }
-
-    .tagline p{
-        margin-left: 2rem;
     }
 
     .foto {
-        grid-area: 2 / 1 / 4 / 3;
-        display: inline-block;
-        border: 2px solid black;
-        border-radius: 50%;
-        overflow: hidden;
-        width: 60%;
-        height: auto;
-        margin-top: 5.5rem;
-        margin-left: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    
+
     .foto img {
-        width: 100%; 
-        height: 100%; 
-        object-fit: cover; 
-        border-radius: 50%; 
-    }
-
-    .konten{
-        background-color: rgba(255, 255, 255, 0.2);
-        font-size: 1rem;
-        margin-top: 6rem;
-        margin-left: 4rem;
-        text-align: left;
-        grid-area: 2/2/4/6;
-        font-size: 1.2rem;
-        margin-right: -0.5rem;
-        margin-bottom: 1.5rem;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-    }
-
-    .konten h1{
-        font-family: 'Poppins', sans-serif;
-        margin-left: 1.9rem;
-    }
-
-    .konten p{
-        margin-left: 1.9rem;
-    }
-
-    .konten-1{
-        background-color: rgba(255, 255, 255, 0.2);
-        grid-area: 3/1/5/5;
-        font-size: 1.3rem;
-        margin-top: 11rem;
-        margin-bottom: -7.5rem;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-    }
-
-    .konten-1 h1{
-        font-family: 'Poppins', sans-serif;
-        margin-left: 2rem;
-    }
-
-    .konten-1 p{
-        margin-left: 2rem;
-    }
-
-    .tagline:hover, .konten:hover, .konten-1:hover {
-        border: 2px solid #edc271; 
-        transform: scale(1.02); 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
-        background-color: rgb(242, 239, 233);
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        border: 2px solid black;
     }
 
     footer {
-        position: relative;
-        width: 100%;
-        background: rgb(242, 239, 233);
-        min-height: 100px;
         padding: 20px 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    }
+}
+
+/* Responsive styling for screens less than 768px */
+@media (max-width: 768px) {
+    .navbar {
         flex-direction: column;
-        text-align: center;
+        margin: 20px;
+        padding: 10px;
     }
 
-    footer .sosmed, footer .menu {
+    .navbar img {
+        width: 60px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .isi {
+        margin: 20px;
+        padding: 10px;
+    }
+
+    section {
+        display: block;
+        padding: 10px;
+    }
+
+    .foto {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 10px 0;
-        width: 100%;
+        margin-top: 20px;
+    }
+
+    .foto img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 2px solid black;
+    }
+
+    .tagline, .konten, .konten-1 {
+        font-size: 1rem;
+        margin: 32px;
+        text-align: justify;
+    }
+}
+
+/* Responsive styling for screens less than 576px */
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
         padding: 0;
     }
 
-    footer .sosmed li, footer .menu li {
-        list-style: none;
-        margin: 0 15px;
+    .navbar img {
+        width: 50px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    .isi {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    section {
+        display: block;
+        padding: 5px;
+    }
+
+    .foto img {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer {
+        padding: 10px 0;
     }
 
     footer .sosmed li a {
-        font-size: 2em;
-        color: #050505;
-        display: inline-block;
-        transition: 0.5s;
-    }
-
-    footer .sosmed li a:hover {
-        transform: translateY(-10px);
+        font-size: 1.5em;
     }
 
     footer .menu li a {
-        font-size: 1.2em;
-        color: #030303;
-        text-decoration: none;
-        opacity: 0.7;
-        transition: opacity 0.3s;
+        font-size: 1em;
     }
-
-    footer .menu li a:hover {
-        opacity: 1;
-    }
-
-    footer p {
-        margin-top: 15px;
-        font-size: 1.1em;
-        width: 100%;
-        text-align: center;
-    }
-
-
-    @media (max-width: 1208px) {
-        section {
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-        }
-        .navbar {
-            margin: 50px 150px 30px 150px;
-            padding: 10px;
-        }
-    
-        .navbar img {
-            width: 70px; 
-        }
-    
-        .navbar a {
-            font-size: 18px; 
-        }
-    
-        .isi {
-            margin: 30px 150px 80px 150px; 
-            padding: 15px;
-        }
-    
-        .tagline, .konten, .konten-1 {
-            margin: 20px 0; 
-            padding: 15px; 
-            border-radius: 8px; 
-            width: 90%; 
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-            background-color: rgba(255, 255, 255, 0.2); 
-        }
-    
-        .foto {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            border: none; 
-            margin-bottom: 20px;
-        }
-    
-        .foto img {
-            width: 320px; 
-            height: 320px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 2px solid black; 
-        }
-    
-        footer {
-            padding: 20px 0;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .navbar {
-            flex-direction: column;
-            margin: 20px;
-            padding: 10px;
-        }
-    
-        .navbar img {
-            width: 60px;
-        }
-    
-        .navbar a {
-            font-size: 16px;
-            margin-right: 10px;
-        }
-    
-        .isi {
-            margin: 20px;
-            padding: 10px;
-        }
-    
-        section {
-            display: block;
-            padding: 10px;
-        }
-    
-        .foto {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-            border: none; 
-        }
-    
-        .foto img {
-            width: 200px; 
-            height: 200px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 2px solid black; 
-        }
-    
-        .tagline {
-            font-size: 1rem;
-            margin: 32px ;
-            
-        }
-    
-        .konten {
-            font-size: 1rem;
-            margin: 32px ;
-            text-align: justify;
-        }
-    
-        .konten-1 {
-            font-size: 1rem;
-            margin: 32px ;
-            text-align: justify;
-            padding-bottom: 20px; 
-        }
-    }
-    
-    
-    @media (max-width: 576px) {
-        .navbar {
-            flex-direction: column;
-            align-items: center;
-            padding: 0;
-        }
-    
-        .navbar img {
-            width: 50px;
-        }
-    
-        .navbar a {
-            font-size: 14px;
-            margin-right: 5px;
-        }
-    
-        .navbar input {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-    
-        .navbar .search-btn {
-            width: 100%;
-        }
-    
-        .isi {
-            margin: 10px;
-            padding: 10px;
-        }
-    
-        section {
-            display: block;
-            padding: 5px;
-        }
-    
-        .foto {
-            width: 100%;
-        }
-    
-        .foto img {
-            width: 150px; 
-            height: 150px; 
-            border-radius: 50%; 
-        }
-    
-        .konten, .konten-1 {
-            font-size: 0.9rem;
-        }
-    
-        footer {
-            padding: 10px 0;
-        }
-    
-        footer .sosmed li a {
-            font-size: 1.5em;
-        }
-    
-        footer .menu li a {
-            font-size: 1em;
-        }
-    }
+}

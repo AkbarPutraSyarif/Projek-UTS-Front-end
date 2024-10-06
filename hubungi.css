@@ -1,8 +1,9 @@
-*{
+* {
     font-family: Renner, helvetica, sans-serif;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-image: url(/Picture/background.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -10,8 +11,8 @@ body{
     margin: 0;
 }
 
-/* navigasi style opening */
-.navbar{
+/* Navbar styles */
+.navbar {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 10px;
     display: flex;
@@ -20,10 +21,9 @@ body{
     background-color: rgb(242, 239, 233);
     margin: 70px 250px 40px 250px;
     padding: 15px;
-    
 }
 
-.navbar img{
+.navbar img {
     width: 80px;
 }
 
@@ -34,16 +34,19 @@ body{
     flex-grow: 1;
 }
 
-
-.navbar a{
+.navbar a {
     font-size: 20px;
     color: black;
     text-decoration: none;
     margin-right: 30px;
 }
 
-/* Style untuk dropdown opening*/
+.navbar a:hover {
+    color: #f93030;
+    transition: color 0.3s;
+}
 
+/* Dropdown styles */
 .dropdown-content a {
     color: black;
     padding: 8px 16px;
@@ -69,11 +72,10 @@ body{
 .dropdown:hover .dropdown-content {
     display: block;
     visibility: visible;
-
 }
 
-
-.container{
+/* Main container */
+.container {
     width: 67%;
     background-color: rgb(242, 239, 233);
     margin: 40px 250px 100px 250px;
@@ -82,13 +84,13 @@ body{
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.container .isi{
+.container .isi {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.container .isi .kiri{
+.container .isi .kiri {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,7 +101,7 @@ body{
     margin-top: 16px;
 }
 
-.container .isi .kiri::before{
+.container .isi .kiri::before {
     content: '';
     position: absolute;
     height: 70%;
@@ -110,43 +112,44 @@ body{
     transform: translateY(-50%);
 }
 
-.isi .kiri .info{
+.isi .kiri .info {
     margin: 14px;
     text-align: center;
 }
 
-.isi .kiri .info i{
+.isi .kiri .info i {
     font-size: 25px;
     margin-bottom: 10px;
 }
 
-.isi .kiri .info .judul{
+.isi .kiri .info .judul {
     font-size: 18px;
     font-weight: 500;
 }
 
-.isi .kiri .info .t1, .isi .kiri .info .t2{
+.isi .kiri .info .t1,
+.isi .kiri .info .t2 {
     font-size: 11px;
     color: #afafb6;
 }
 
-.container .isi .kanan{
+.container .isi .kanan {
     width: 75%;
     margin-left: 75px;
 }
 
-.isi .kanan .judul-1{
+.isi .kanan .judul-1 {
     font-size: 23px;
     font-weight: 600;
 }
 
-.kanan .input-info{
+.kanan .input-info {
     height: 50px;
     width: 100%;
     margin: 12px 0;
 }
 
-.kanan .input-info input{
+.kanan .input-info input {
     height: 100%;
     width: 100%;
     border: none;
@@ -157,7 +160,7 @@ body{
     padding: 0 15px;
 }
 
-.kanan .input-pesan textarea{
+.kanan .input-pesan textarea {
     height: 100%;
     width: 100%;
     border: none;
@@ -169,17 +172,17 @@ body{
     padding-top: 10px;
 }
 
-.kanan .input-pesan textarea{
+.kanan .input-pesan textarea {
     min-height: 110px;
     resize: none;
 }
 
-.kanan .button{
+.kanan .button {
     display: inline-block;
     margin-top: 12px;
 }
 
-.kanan .button button{
+.kanan .button button {
     color: #fff;
     font-size: 18px;
     background-color: #030303;
@@ -191,14 +194,14 @@ body{
     cursor: pointer;
 }
 
-.button button:hover{
+.button button:hover {
     background-color: white;
     color: #030303;
 }
 
 .error-message {
     color: red;
-    font-size: 12px; 
+    font-size: 12px;
     margin-bottom: 10px;
     display: block;
 }
@@ -216,7 +219,8 @@ footer {
     text-align: center;
 }
 
-footer .sosmed, footer .menu {
+footer .sosmed,
+footer .menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,7 +229,8 @@ footer .sosmed, footer .menu {
     padding: 0;
 }
 
-footer .sosmed li, footer .menu li {
+footer .sosmed li,
+footer .menu li {
     list-style: none;
     margin: 0 15px;
 }
@@ -260,11 +265,34 @@ footer p {
     text-align: center;
 }
 
-@media (max-width: 950px) {
+/* Responsive styling */
+@media (max-width: 1200px) {
     .navbar {
+        margin: 70px 50px 40px 50px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 40px 50px 100px 50px;
+        padding: 30px 40px 40px 40px;
+    }
+
+    .isi .kiri,
+    .isi .kanan {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .isi {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
         margin: 20px;
         padding: 10px;
+        flex-direction: column;
     }
 
     .navbar img {
@@ -278,26 +306,36 @@ footer p {
 
     .container {
         width: 90%;
-        padding: 30px 35px 40px 35px;
-        margin: 40px auto;
+        padding: 30px 20px 40px 20px;
+        margin: 20px auto;
     }
 
-    .container .isi {
-        flex-direction: column;
-    }
-
-    .container .isi .kiri {
-        width: 100%;
+    .isi .kiri {
         margin-bottom: 20px;
-        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar img {
+        width: 50px;
     }
 
-    .container .isi .kanan {
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .container {
         width: 100%;
-        margin-left: 0;
+        padding: 20px;
     }
 
-    .container .isi .kiri::before {
-        display: none;
+    .kanan .input-info,
+    .kanan .input-pesan textarea {
+        font-size: 14px;
+    }
+
+    .kanan .button button {
+        font-size: 16px;
+        padding: 6px 12px;
     }
 }
