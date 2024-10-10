@@ -38,12 +38,13 @@ function displayRandomRecipe() {
 
     const recipeDisplay = document.getElementById('recipe-display');
     recipeDisplay.innerHTML = `
-        <a href="${randomRecipe.url}" style="font-size: 28px; color: #f93030; text-decoration: none; font-weight: bold;">
-            ${randomRecipe.name}
-        </a>
-        <br>
-        <img src="${randomRecipe.img}" alt="${randomRecipe.name}" style="width: 400px; height: auto; margin-top: 20px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-    `;
+    <a href="${randomRecipe.url}" style="font-size: 28px; color: #f93030; text-decoration: none; font-weight: bold;">
+        ${randomRecipe.name}
+    </a>
+    <br>
+    <img src="${randomRecipe.img}" alt="${randomRecipe.name}" style="width: 100%; height: auto; max-width: 400px; margin-top: 20px; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+`;
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -80,6 +80,7 @@ html {
     transition: color 0.3s;
 }
 
+
 /* Dropdown styling */
 .dropdown-content a {
     color: black;
@@ -130,12 +131,14 @@ html {
     border: 1px solid white;
     background-color: rgba(242, 239, 233, 0.5);
     border-radius: 25px;
-    padding: 5px;
+    padding: 10px;
     width: auto;
     text-decoration: none;
     margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
     color: black;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* digunakan untuk mentransisi warna dan ukuran lebih besar pada hover */
 }
 
 .pilih-menu .sec-1 a:hover, .pilih-menu .sec-2 a:hover {
@@ -179,7 +182,7 @@ html {
     align-items: center;
     padding: 20px;
     width: 220px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* transisi ini untuk gambar akan naik keatas sedikit */
 }
 
 .resep .menu-item a {
@@ -194,7 +197,7 @@ html {
     width: 220px;
     height: 220px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* untuk mengubah ukuran lebih besar */
 }
 
 .resep .menu-item:hover {
@@ -269,72 +272,6 @@ footer p {
     text-align: center;
 }
 
-/* Responsive styling for devices smaller than 768px */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-        margin: 20px 50px;
-    }
-
-    .navbar img {
-        width: 60px;
-    }
-
-    .navbar .nama-logo {
-        font-size: 24px;
-        margin-right: 0;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    .navbar a {
-        font-size: 18px;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .dropdown {
-        margin-bottom: 20px;
-    }
-
-    .dropdown-content {
-        padding: 0px;
-    }
-
-    .navbar .search-btn {
-        margin-top: 20px;
-    }
-
-    .pilih-menu h1 {
-        font-size: 20px;
-        width: 40%;
-    }
-
-    .resep {
-        margin: 20px auto;
-        padding: 10px;
-        width: 80%;
-    }
-
-    .resep .menu-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .resep .menu-item {
-        max-width: 90%;
-        height: auto;
-    }
-
-    .resep .menu-item img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* Responsive styling for devices smaller than 1048px */
 @media (max-width: 1048px) {
     .navbar {
         flex-direction: column;
@@ -365,8 +302,14 @@ footer p {
         margin-bottom: 20px;
     }
 
-    .dropdown-content {
-        padding: 0px;
+    .dropdown-content a {
+        margin: 0;
+    }
+
+    .pilih-menu h1 {
+        font-size: 20px;
+        width: 82%;
+        text-align: center;
     }
 
     .navbar .search-btn {
@@ -374,9 +317,9 @@ footer p {
     }
 
     .resep {
-        margin: 20px auto;
+        margin: 10px auto;
         padding: 10px;
-        width: 80%;
+        width: 85%;
     }
 
     .resep .menu-item {
@@ -388,4 +331,72 @@ footer p {
         width: 100%;
         height: auto;
     }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 20px;
+    }
+
+    .navbar .nama-logo {
+        font-size: 24px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .navbar .search-input{
+        width: 80%;
+        justify-content: center;
+    }
+
+    .dropdown {
+        margin-bottom: 20px;
+    }
+
+    .dropdown-content a {
+        margin: 0;
+    }
+
+    .navbar .search-btn {
+        margin-top: 20px;
+        width: 50px;
+    }
+
+    .pilih-menu h1 {
+        font-size: 20px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .resep {
+        margin: 10px auto;
+        padding: 10px;
+        width: 85%;
+    }
+
+    .resep .menu-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resep .menu-item {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .resep .menu-item img {
+        width: 100%;
+        height: auto;
+    }
+
 }

@@ -161,11 +161,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .information h1 {
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    border: 2px solid #edc271;
 }
 
 .foto {
@@ -331,74 +333,156 @@ footer p {
     text-align: center;
 }
 
-/* Responsive styling */
-@media (max-width: 1200px) {
+@media (max-width: 1048px) {
     .navbar {
-        margin: 70px 50px 40px 50px;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 20px 50px;
+        justify-content: center;
+    }
+
+    .navbar img {
+        width: 60px;
+    }
+
+    .navbar .nama-logo {
+        font-size: 24px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .dropdown {
+        margin-bottom: 20px;
+    }
+
+    .dropdown-content a {
+        margin: 0;
     }
 
     .isis {
-        margin: 40px 50px 100px 50px;
+        margin: 20px auto;
+        padding: 10px;
+        width: 85%;
     }
 
     #nutritional-facts, #random-recipe {
-        margin: 50px 50px;
+        margin: 20px auto;
+        padding: 10px;
+        width: 80%;
     }
 }
 
 @media (max-width: 768px) {
     .navbar {
-        margin: 20px;
-        padding: 10px;
         flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 20px 20px;
     }
 
-    .isi {
-        flex-direction: column;
-        height: auto;
+    .navbar img {
+        width: 60px;
     }
+
+    .navbar .nama-logo {
+        font-size: 24px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-content a {
+        margin: 0;
+    }
+
+    .isi{
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 89%;
+    }
+
 
     .isis {
         display: block;
-        margin: 20px;
+        margin: 20px auto;
+        padding: 20px;
+        width: 85%;
     }
 
     .content, .information, .foto {
         grid-column: 1 / 2;
         margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .foto{
+        margin-top: 25px;
+        margin-bottom: 5px;
     }
 
     #nutritional-facts, #random-recipe {
-        margin: 20px;
-    }
-
-    .content {
-        margin-left: 0;
-        margin-right: 0;
+        margin: 20px auto;
+        padding: 10px;
+        width: 80%;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 468px) {
     .navbar {
-        margin: 10px;
-        padding: 5px;
-    }
-
-    .isi {
         flex-direction: column;
-        padding: 0 10px;
-    }
-
-    .foto {
-        width: 150px;
-        height: 150px;
-    }
-
-    .content {
+        align-items: center;
         padding: 10px;
+        margin: 20px;
     }
 
-    #nutritional-facts h2, #random-recipe a {
+    .navbar .nama-logo {
         font-size: 24px;
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
     }
+
+    .navbar a {
+        font-size: 18px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-content a {
+        margin: 0;
+    }
+
+    .isi{
+        margin-top: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 100px;
+        width: 89%;
+    }
+
+    .isis {
+        margin: 0 auto;
+        padding: 20px;
+        width: 80%;
+    }
+
+    .content, .information, .foto {
+        grid-column: 1 / 3;
+        margin-top: 50px;
+    }
+
 }
