@@ -46,7 +46,7 @@ $(document).ready(function () {
   // batas
 
 
-  // penggunaan search
+  // akan mengloop untuk mencari resep yang sesuai dengan query yang dimasukan
   $('#search-btn').on('click', function() {
     const query = $('#search-box').val().toLowerCase();
     let found = false;
@@ -66,6 +66,7 @@ $(document).ready(function () {
             }
         });
 
+        // menampilkan resep yang dicari di query dan yang lain akan di hide
         if (hasVisibleItem) {
             $(this).prev('h1').show();
             $(this).show();
@@ -75,6 +76,7 @@ $(document).ready(function () {
         }
     });
 
+    // kalau ga ketemu resepnya
     if (!found) {
         $('#no-result').show();
     } else {
