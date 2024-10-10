@@ -26,6 +26,7 @@ html {
     padding: 15px;
 }
 
+/* untuk desain input form dari search */
 .navbar input {
     width: 250px;
     padding: 8px 15px;
@@ -35,6 +36,7 @@ html {
     margin-right: 10px;
 }
 
+/* untuk desain tombol searchnya */
 .navbar .search-btn {
     padding: 10px 20px;
     background: linear-gradient(45deg, #007BFF, #00D4FF);
