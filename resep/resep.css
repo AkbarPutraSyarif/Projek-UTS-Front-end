@@ -19,7 +19,7 @@ h2 {
 
 .konten {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 1fr itu adalah 1 kolom */
     margin: 50px;
     grid-gap: 20px;
     background-color: #fff;
@@ -29,7 +29,7 @@ h2 {
 }
 
 .konten img {
-    grid-column: 1;
+    grid-column: 1; 
     margin-top: 40px;
     width: 100%;
     height: auto;
@@ -44,7 +44,7 @@ h2 {
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: none; /* menghilangkan list yang ada */
     padding: 0;
 }
 
@@ -89,7 +89,7 @@ footer .menu li a {
     color: #030303;
     text-decoration: none;
     opacity: 0.7;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s; 
 }
 
 footer .menu li a:hover {
@@ -98,7 +98,7 @@ footer .menu li a:hover {
 
 footer p {
     margin-top: 15px;
-    font-size: 1.1em;
+    font-size: 1.1em; /* 1em = 16px */
     text-align: center;
 }
 
@@ -109,6 +109,6 @@ footer p {
     }
     .konten img {
         grid-column: 1;
-        max-width: 100vh;
+        max-width: 100vh; /* vh = ukuran layar */
     }
 }
