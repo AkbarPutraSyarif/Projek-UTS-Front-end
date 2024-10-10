@@ -1,0 +1,341 @@
+* {
+    font-family: Renner, helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/Picture/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar styles */
+.navbar {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(242, 239, 233);
+    margin: 70px 250px 40px 250px;
+    padding: 15px;
+}
+
+.navbar img {
+    width: 80px;
+}
+
+.navbar .nama-logo {
+    font-size: 30px;
+    color: #f93030;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    flex-grow: 1;
+}
+
+.navbar a {
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.navbar a:hover {
+    color: #f93030;
+    transition: color 0.3s;
+}
+
+/* Dropdown styles */
+.dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.dropdown-content a:hover {
+    background-color: #fbadad;
+    border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    visibility: visible;
+}
+
+/* Main container */
+.container {
+    width: 67%;
+    background-color: rgb(242, 239, 233);
+    margin: 40px 250px 100px 250px;
+    padding: 30px 60px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .isi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .isi .kiri {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    position: relative;
+    margin-top: 16px;
+}
+
+.container .isi .kiri::before {
+    content: '';
+    position: absolute;
+    height: 70%;
+    width: 2px;
+    background: #afafb6;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.isi .kiri .info {
+    margin: 14px;
+    text-align: center;
+}
+
+.isi .kiri .info i {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.isi .kiri .info .judul {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.isi .kiri .info .t1,
+.isi .kiri .info .t2 {
+    font-size: 11px;
+    color: #afafb6;
+}
+
+.container .isi .kanan {
+    width: 75%;
+    margin-left: 75px;
+}
+
+.isi .kanan .judul-1 {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.kanan .input-info {
+    height: 50px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.kanan .input-info input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background: #c9c8c8;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+}
+
+.kanan .input-pesan textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background: #c9c8c8;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+    padding-top: 10px;
+}
+
+.kanan .input-pesan textarea {
+    min-height: 110px;
+    resize: none;
+}
+
+.kanan .button {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.kanan .button button {
+    color: #fff;
+    font-size: 18px;
+    background-color: #030303;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button button:hover {
+    background-color: white;
+    color: #030303;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background: rgb(242, 239, 233);
+    min-height: 100px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer .sosmed,
+footer .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 100%;
+    padding: 0;
+}
+
+footer .sosmed li,
+footer .menu li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+footer .sosmed li a {
+    font-size: 2em;
+    color: #050505;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer .sosmed li a:hover {
+    transform: translateY(-10px);
+}
+
+footer .menu li a {
+    font-size: 1.2em;
+    color: #030303;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+footer .menu li a:hover {
+    opacity: 1;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsive styling */
+@media (max-width: 1200px) {
+    .navbar {
+        margin: 70px 50px 40px 50px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 40px 50px 100px 50px;
+        padding: 30px 40px 40px 40px;
+    }
+
+    .isi .kiri,
+    .isi .kanan {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .isi {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        margin: 20px;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .navbar img {
+        width: 60px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 30px 20px 40px 20px;
+        margin: 20px auto;
+    }
+
+    .isi .kiri {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar img {
+        width: 50px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .kanan .input-info,
+    .kanan .input-pesan textarea {
+        font-size: 14px;
+    }
+
+    .kanan .button button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}

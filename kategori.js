@@ -33,4 +33,40 @@ $(document).ready(function () {
   $('.coming').on('click', function() {
       $('.dialog').dialog("open");
   });
+
+  $('#search-btn').on('click', function() {
+    const query = $('#search-box').val().toLowerCase();
+    let found = false;
+
+    $('.resep-1 .menu-list').each(function() {
+        let hasVisibleItem = false;
+
+        $(this).find('.menu-item').each(function() {
+            const text = $(this).text().toLowerCase();
+            
+            if (text.includes(query)) {
+                $(this).show();
+                hasVisibleItem = true;
+                found = true;
+            } else {
+                $(this).hide();
+            }
+        });
+
+        if (hasVisibleItem) {
+            $(this).prev('h1').show();
+            $(this).show();
+        } else {
+            $(this).prev('h1').hide();
+            $(this).hide();
+        }
+    });
+
+    if (!found) {
+        $('#no-result').show();
+    } else {
+        $('#no-result').hide();
+    }
+});
+
 });
