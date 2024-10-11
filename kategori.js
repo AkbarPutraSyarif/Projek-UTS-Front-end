@@ -1,4 +1,6 @@
 $(document).ready(function () {
+
+  // inisialisasi. Berguna untuk pindah lokasi. Ini berguna untuk jika di klik gambar maka akan pergi ke web lain
   const linkResep = [
       { imgId: '#vegan1', href: '/resep/vegan1.html' },
       { imgId: '#kalori1', href: '/resep/kalori1.html' },
@@ -14,9 +16,15 @@ $(document).ready(function () {
       });
   });
 
+  // batas 
+
+  // jika diarahkan ke tempat yang memiliki class menu maka akan keluar tooltip
   $('.menu-item').tooltip({
       track: true
   });
+  // batas
+
+  //jika diklik maka keluar sebuah dialog pada jquery dengan effect blind dan slideUp dengan durasi 1000 atau 1 detik
 
   $(".dialog").dialog({
       autoOpen: false,
@@ -30,10 +38,15 @@ $(document).ready(function () {
       }
   });
 
+  // jika di click maka keluar dialog
   $('.coming').on('click', function() {
       $('.dialog').dialog("open");
   });
 
+  // batas
+
+
+  // akan mengloop untuk mencari resep yang sesuai dengan query yang dimasukan
   $('#search-btn').on('click', function() {
     const query = $('#search-box').val().toLowerCase();
     let found = false;
@@ -53,6 +66,7 @@ $(document).ready(function () {
             }
         });
 
+        // menampilkan resep yang dicari di query dan yang lain akan di hide
         if (hasVisibleItem) {
             $(this).prev('h1').show();
             $(this).show();
@@ -62,6 +76,7 @@ $(document).ready(function () {
         }
     });
 
+    // kalau ga ketemu resepnya
     if (!found) {
         $('#no-result').show();
     } else {
