@@ -275,6 +275,7 @@ footer p {
     text-align: center;
 }
 
+/* responsive */
 @media (max-width: 1048px) {
     .navbar {
         flex-direction: column;

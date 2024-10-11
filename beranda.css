@@ -2,27 +2,6 @@
     font-family: Renner, helvetica, sans-serif;
 }
 
-@keyframes appear {
-    from {
-        opacity: 0;
-        scale: 0.5;
-    }
-    to {
-        opacity: 1;
-        scale: 1;
-    }
-}
-@keyframes slide-in {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 body{
     background-image: url(/Picture/background.jpg);
     background-size: cover;
@@ -184,7 +163,6 @@ body{
     grid-column: 2;
     align-self: center;
     justify-self: center;
-    animation: appear linear;
 }
 
 .foto img {
@@ -333,6 +311,8 @@ footer p {
     text-align: center;
 }
 
+
+/* responsive */
 @media (max-width: 1048px) {
     .navbar {
         flex-direction: column;
